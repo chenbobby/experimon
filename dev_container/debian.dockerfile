@@ -14,6 +14,9 @@ RUN apt-get install -y zsh
 RUN apt-get install -y sudo
 RUN apt-get install -y vim
 
+RUN apt-get install -y pkg-config
+RUN apt-get install -y bpftool
+
 RUN groupadd --gid 1000 debian
 RUN useradd --uid 1000 --gid 1000 -m debian
 RUN usermod --append --groups sudo debian
