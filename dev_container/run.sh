@@ -5,6 +5,7 @@
 
 set -euv
 
+IMAGE_NAME=experimon
 CONTAINER_NAME=experimon
 
-docker run --detach --interactive --tty --name=$CONTAINER_NAME --publish=8022:22 experimon:latest
+docker run --detach --interactive --tty --privileged --name=$CONTAINER_NAME --publish=8022:22 $IMAGE_NAME:latest

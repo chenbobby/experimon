@@ -2,4 +2,6 @@
 
 set -euv
 
-docker build --tag=experimon:latest --file=experimon.dockerfile .
+IMAGE_NAME=experimon
+
+docker build --tag=experimon --file=debian.dockerfile .
